@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'maven'
 
 group 'se.fearless.kahluatest'
 version '1.0-SNAPSHOT'
