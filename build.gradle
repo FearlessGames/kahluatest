@@ -1,0 +1,26 @@
+apply plugin: 'java'
+
+group 'se.fearless.kahluatest'
+version '1.0-SNAPSHOT'
+
+allprojects {
+	sourceCompatibility = 1.7
+	targetCompatibility = 1.7
+}
+
+repositories {
+	mavenCentral()
+	maven {
+		url 'http://flexo.fearlessgames.se/artifactory/libs-local'
+		credentials {
+			username = "reader"
+			password = "f3ArlessGamesR0X!"
+		}
+	}
+}
+
+dependencies {
+	compile 'junit:junit:4.12'
+	compile 'se.fearless.fearless-common:lua:1.0-SNAPSHOT'
+	testCompile 'se.mockachino:mockachino:0.7.1'
+}
