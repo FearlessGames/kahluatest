@@ -13,6 +13,9 @@ public class LuaSourceProviderImpl implements LuaSourceProvider {
 
 	public Reader getLuaSource(String key) {
 		try {
+			if (!key.endsWith(".lua")) {
+				key = key + ".lua";
+			}
 			URL url = Resources.getResource(key);
 			return CharStreams.newReaderSupplier(Resources.newInputStreamSupplier(url), Charsets.UTF_8).getInput();
 		} catch (IOException e) {
