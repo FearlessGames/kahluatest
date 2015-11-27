@@ -26,12 +26,12 @@ public class JunitApiExposer {
 	}
 
 	@LuaMethod(global = true)
-	public void assertNull(Object object) {
+	public void assertNil(Object object) {
 		Assert.assertNull(object);
 	}
 
 	@LuaMethod(global = true)
-	public void assertNotNull(Object object) {
+	public void assertNotNil(Object object) {
 		Assert.assertNotNull(object);
 	}
 
